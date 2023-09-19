@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel e Tesoura</title>
+    <style>
+        header {
+            font: normal 15pt Arial;
+            text-align: center;
+            color: rgba(61, 61, 185, 0.884);
+        }
+        section1 {
+            font: italic 10pt Arial;
+            text-align: center;
+        }
+        section2 {
+            font: normal 15pt Arial;
+            text-align: center;
+        }
+        footer {
+
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <header>
+            <h1>Pedra, Papel e Tesoura<br></h1>
+        </header>
+        <section1>
+            <div>
+                <p><strong>Regras do jogo:</strong><br>
+                    Pedra GANHA de Tesoura e PERDE para Papel.<br>
+                    Tesoura GANHA de Papel e PERDE para Pedra.<br>
+                    Papel GANHA de Pedra e PERDE de Tesoura.<br>
+                </p>
+            </div>
+        </section1>
+        <section2>
+            <div>
+                <p>Escolha uma opção:<br>
+                    <input type="radio" name="opc" id="pedra" checked>
+                    <label for="pedra">Pedra<br></label>
+                    <input type="radio" name="opc" id="papel">
+                    <label for="papel">Papel<br></label>
+                    <input type="radio" name="opc" id="tesoura">
+                    <label for="tesoura">Tesoura<br></label>
+                </p>
+                <p>
+                    <input type="button" value="Jogar" onclick="jogar()">
+                </p>
+            </div>
+            <div id="res">
+                
+            </div>
+        </section2>
+        <footer>
+            <p>&copy; Alex Custodio Rabelo Gomes<br>
+                 Matricula: 2222900</p>
+        </footer>
+        <script>
+            function jogar() {
+            //RESULADO ALEATORIO
+            const jogo = ['Pedra','Papel','Tesoura']
+            const randomChoice = (min, max) =>
+                Math.floor(Math.random() * (max - min + 1)) + min
+            const resAleatorio = () =>
+                jogo[randomChoice(0, jogo.length - 1)]
+            var computador = resAleatorio()
+            
+            //ESCOLHA DO JOGADOR
+            var fescolha = document.getElementsByName("opc")
+            var escolha = ""
+            if (fescolha[0].checked) {
+                escolha = "Pedra"
+            } else if (fescolha[1].checked) {
+                escolha = "Papel"
+            } else if (fescolha[2].checked) {
+                escolha = "Tesoura"
+            }
+
+            //REGRAS DO JOGO
+            var resultado = "oi"
+            
+            if (fescolha[0].checked && computador == 'Pedra') {
+                resultado = "Empate"
+            }   else if (fescolha[0].checked && computador == 'Papel') {
+                resultado = "Derrota"
+            }   else if (fescolha[0].checked && computador == 'Tesoura') {
+                resultado = "Vitoria"
+            }
+            
+            if (fescolha[1].checked && computador == 'Pedra') {
+                resultado = "Vitoria"
+            }   else if (fescolha[1].checked && computador == 'Papel') {
+                resultado = "Empate"
+            }   else if (fescolha[1].checked && computador == 'Tesoura') {
+                resultado = "Derrota"
+            }
+
+            if (fescolha[2].checked && computador == 'Pedra') {
+                resultado = "Derrota"
+            }   else if (fescolha[2].checked && computador == 'Papel') {
+                resultado = "Vitoria"
+            }   else if (fescolha[2].checked && computador == 'Tesoura') {
+                resultado = "Empate"
+            }
+
+            //RESPOSTA DO JOGO
+            window.alert(`Você escolheu: ${escolha},\na maquina escolheu: ${computador},\nlogo, o resultado é: ${resultado}!`)
+
+            //PERGUNTAR DE DESEJA JOGAR NOVAMENTE
+            function atualizar() {
+                window.location.reload()
+            }
+            function sair() {
+                window.close()
+            }
+            var retorno = window.confirm('Deseja jogar novamente?')
+            if (retorno == true) {
+                atualizar()
+            } else {
+                alert('Fim do jogo')
+                sair()
+            }
+
+            }
+            
+        </script>
+</body>
+</html>
