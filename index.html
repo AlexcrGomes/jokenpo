@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt=BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +9,29 @@
 </head>
 <body>
         <header>
-            <h1>Pedra, Papel e Tesoura<br></h1>
+            <h1>Jokenpo<br></h1>
         </header>
         <section1>
             <div>
-                <p><strong>Regras do jogo:</strong><br>
-                    Pedra GANHA de Tesoura e PERDE para Papel.<br>
-                    Tesoura GANHA de Papel e PERDE para Pedra.<br>
-                    Papel GANHA de Pedra e PERDE de Tesoura.<br>
+                <p><strong>Game rules:</strong><br>
+                    Rock loses to paper and wins to scissors.<br>
+                    Paper loses to scissors and wins to stone.<br>
+                    Scissors loses to stone and wins to paper.<br>
                 </p>
             </div>
         </section1>
         <section2>
             <div>
-                <p>Escolha uma opção:<br>
-                    <input type="radio" name="opc" id="pedra" checked>
-                    <label for="pedra">Pedra<br></label>
-                    <input type="radio" name="opc" id="papel">
-                    <label for="papel">Papel<br></label>
-                    <input type="radio" name="opc" id="tesoura">
-                    <label for="tesoura">Tesoura<br></label>
+                <p>Choose an option:<br>
+                    <input type="radio" name="option" id="pedra" checked>
+                    <label for="Rock">Rock<br></label>
+                    <input type="radio" name="option" id="papel">
+                    <label for="Paper">Paper<br></label>
+                    <input type="radio" name="option" id="tesoura">
+                    <label for="Scissors">Scissors<br></label>
                 </p>
                 <p>
-                    <input type="button" value="Jogar" onclick="jogar()">
+                    <input type="button" value="play" onclick="play()">
                 </p>
             </div>
             <div id="res">

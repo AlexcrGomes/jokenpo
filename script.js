@@ -1,66 +1,66 @@
-function jogar() {
-    //RESULADO ALEATORIO
-    const jogo = ['Pedra','Papel','Tesoura']
+function play() {
+    //RANDOM RESULT
+    const jogo = ['Rock','Paper','Scissors']
     const randomChoice = (min, max) =>
         Math.floor(Math.random() * (max - min + 1)) + min
-    const resAleatorio = () =>
+    const randomResult = () =>
         jogo[randomChoice(0, jogo.length - 1)]
-    var computador = resAleatorio()
+    var machine = randomResult()
     
-    //ESCOLHA DO JOGADOR
-    var fescolha = document.getElementsByName("opc")
-    var escolha = ""
-    if (fescolha[0].checked) {
-        escolha = "Pedra"
-    } else if (fescolha[1].checked) {
-        escolha = "Papel"
-    } else if (fescolha[2].checked) {
-        escolha = "Tesoura"
+    //PLAYER'S CHOICE
+    var playChoice = document.getElementsByName("option")
+    var choice = ""
+    if (playChoice[0].checked) {
+        choice = "Rock"
+    } else if (playChoice[1].checked) {
+        choice = "Paper"
+    } else if (playChoice[2].checked) {
+        choice = "Scissors"
     }
 
-    //REGRAS DO JOGO
-    var resultado = "oi"
+    //GAME LOGIC
+    var result = ""
     
-    if (fescolha[0].checked && computador == 'Pedra') {
-        resultado = "Empate"
-    }   else if (fescolha[0].checked && computador == 'Papel') {
-        resultado = "Derrota"
-    }   else if (fescolha[0].checked && computador == 'Tesoura') {
-        resultado = "Vitoria"
+    if (playChoice[0].checked && machine == 'Rock') {
+        result = "Empate"
+    }   else if (playChoice[0].checked && machine == 'Paper') {
+        result = "Derrota"
+    }   else if (playChoice[0].checked && machine == 'Scissors') {
+        result = "Vitoria"
     }
     
-    if (fescolha[1].checked && computador == 'Pedra') {
-        resultado = "Vitoria"
-    }   else if (fescolha[1].checked && computador == 'Papel') {
-        resultado = "Empate"
-    }   else if (fescolha[1].checked && computador == 'Tesoura') {
-        resultado = "Derrota"
+    if (playChoice[1].checked && machine == 'Rock') {
+        result = "Vitoria"
+    }   else if (playChoice[1].checked && machine == 'Paper') {
+        result = "Empate"
+    }   else if (playChoice[1].checked && machine == 'Scissors') {
+        result = "Derrota"
     }
 
-    if (fescolha[2].checked && computador == 'Pedra') {
-        resultado = "Derrota"
-    }   else if (fescolha[2].checked && computador == 'Papel') {
-        resultado = "Vitoria"
-    }   else if (fescolha[2].checked && computador == 'Tesoura') {
-        resultado = "Empate"
+    if (playChoice[2].checked && machine == 'Rock') {
+        result = "Derrota"
+    }   else if (playChoice[2].checked && machine == 'Paper') {
+        result = "Vitoria"
+    }   else if (playChoice[2].checked && machine == 'Scissors') {
+        result = "Empate"
     }
 
-    //RESPOSTA DO JOGO
-    window.alert(`Você escolheu: ${escolha},\na maquina escolheu: ${computador},\nlogo, o resultado é: ${resultado}!`)
+    //GAME ANSWER
+    window.alert(`You chose: ${choice},\nThe machine chose: ${machine},\nThen, the result is: ${result}!`)
 
-    //PERGUNTAR DE DESEJA JOGAR NOVAMENTE
-    function atualizar() {
+    //ASK IF YOU WANT TO PLAY AGAIN
+    function refresh() {
         window.location.reload()
     }
-    function sair() {
+    function exit() {
         window.close()
     }
-    var retorno = window.confirm('Deseja jogar novamente?')
-    if (retorno == true) {
-        atualizar()
+    var resetGame = window.confirm('Would you want to play again?   ')
+    if (resetGame == true) {
+        refresh()
     } else {
-        alert('Fim do jogo')
-        sair()
+        alert('End game')
+        exit()
     }
 
     }
