@@ -1,0 +1,24 @@
+header {
+    font: normal 15pt Arial;
+    text-align: center;
+    color: rgba(61, 61, 185, 0.884);
+}
+section1 {
+    font: italic 10pt Arial;
+    text-align: center;
+}
+section2 {
+    font: normal 15pt Arial;
+    text-align: center;
+}
+#copyright.placeholder {
+    color: #4e4c4c9d;
+    user-select: none;
+    text-align: center;
+    border-top: 1px solid #333;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+  }

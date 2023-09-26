@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jokenpo</title>
+</head>
+<body>
+        <header>
+            <h1>Pedra, Papel e Tesoura<br></h1>
+        </header>
+        <section1>
+            <div>
+                <p><strong>Regras do jogo:</strong><br>
+                    Pedra GANHA de Tesoura e PERDE para Papel.<br>
+                    Tesoura GANHA de Papel e PERDE para Pedra.<br>
+                    Papel GANHA de Pedra e PERDE de Tesoura.<br>
+                </p>
+            </div>
+        </section1>
+        <section2>
+            <div>
+                <p>Escolha uma opção:<br>
+                    <input type="radio" name="opc" id="pedra" checked>
+                    <label for="pedra">Pedra<br></label>
+                    <input type="radio" name="opc" id="papel">
+                    <label for="papel">Papel<br></label>
+                    <input type="radio" name="opc" id="tesoura">
+                    <label for="tesoura">Tesoura<br></label>
+                </p>
+                <p>
+                    <input type="button" value="Jogar" onclick="jogar()">
+                </p>
+            </div>
+            <div id="res">
+                
+            </div>
+        </section2>
+        <footer id="copyright" class="placeholder">
+            <p>&copy; Alex Custodio Rabelo Gomes
+        </footer>
+        
+        <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
