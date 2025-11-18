@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jokenpô - Jogo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page">
+  <div class="game-container">
+    <header class="header">
+      <a href="index.html" class="icon-btn" title="Voltar para Home">🏠</a>
+      <h2>JOKENPÔ</h2>
+      <span class="header-spacer"></span>
+    </header>
+
+    <section class="score-card">
+      <div class="score-item">
+        <p>Você</p>
+        <p id="player-score" class="score-value">0</p>
+      </div>
+      <div class="score-item">
+        <p>Empates</p>
+        <p id="draws-score" class="score-value">0</p>
+      </div>
+      <div class="score-item">
+        <p>Computador</p>
+        <p id="computer-score" class="score-value">0</p>
+      </div>
+    </section>
+
+    <main class="game-main">
+      <div id="result-message" class="result neutral">
+        Faça sua escolha
+      </div>
+
+      <div id="choices-display" class="choices-display">
+        <div class="choice-block">
+          <p>Você</p>
+          <div id="player-choice" class="choice-emoji">—</div>
+        </div>
+
+        <div class="vs-block">
+          <span>VS</span>
+        </div>
+
+        <div class="choice-block">
+          <p>Computador</p>
+          <div id="computer-choice" class="choice-emoji">—</div>
+        </div>
+      </div>
+
+      <div class="choices-buttons">
+        <button class="btn choice-btn" data-choice="rock">
+          ✊
+          <span>Pedra</span>
+        </button>
+        <button class="btn choice-btn" data-choice="paper">
+          ✋
+          <span>Papel</span>
+        </button>
+        <button class="btn choice-btn" data-choice="scissors">
+          ✌️
+          <span>Tesoura</span>
+        </button>
+      </div>
+
+      <button id="btn-reset" class="btn btn-outline hidden">
+        🔄 Nova rodada
+      </button>
+    </main>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
