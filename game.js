@@ -1,6 +1,7 @@
 let playerChoice = null;
 let computerChoice = null;
 let result = null;
+let isPlaying = false;
 const score = { player: 0, computer: 0, draws: 0 };
 
 const choices = [
